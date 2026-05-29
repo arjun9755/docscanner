@@ -1,0 +1,34 @@
+{
+  "loginScreen": {
+    "logIn": "LogIn",
+    "login": "Login"
+  },
+  "modalScreen": {
+    "modalScreen": "Modal Screen",
+    "modalDescription": "This is a modal screen. Tap outside to dismiss."
+  },
+  "homeScreen": {
+    "homeScreen": "Home Screen",
+    "openModalScreen": "Open Modal Screen"
+  },
+  "profileScreen": {
+    "profileScreen": "Profile Screen",
+    "logout": "Logout",
+    "changeLanguage": "Change Language",
+    "cancel": "Cancel"
+  },
+  "validations": {
+    "email": "Please enter email",
+    "validEmail": "Please enter valid email",
+    "password": "Please enter password"
+  },
+  "messages": {
+    "loginSuccessful": "Login successful!",
+    "logoutSuccessful": "Logout successful!"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "hi": "Hindi"
+  }
+}
