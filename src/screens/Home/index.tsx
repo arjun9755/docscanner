@@ -3,26 +3,22 @@ import {StyleSheet, View} from 'react-native';
 import {TabNavigationWithAppStackScreenProps} from '@types';
 import {colors, perfectSize} from '@theme';
 import {fonts} from '@fonts';
-import {PrimaryButton, PrimaryText} from '@components';
+import {PrimaryText, PrimaryButton} from '@components';
 import {useTranslation} from 'react-i18next';
-import moment from 'moment';
 
-const Home: FC<TabNavigationWithAppStackScreenProps<'Home'>> = ({
-  navigation,
-}) => {
+const Home: FC<TabNavigationWithAppStackScreenProps<'Home'>> = ({navigation}) => {
   const {t: translate} = useTranslation();
+
+  const handleOpenScanner = () => {
+    navigation.navigate('DocScanner');
+  };
+
   return (
     <View style={styles.mainView}>
       <PrimaryText style={styles.lblHomeScreen}>
-        {translate('homeScreen.homeScreen')}
+        {translate('homeScreen.docScanner')}
       </PrimaryText>
-      <PrimaryText style={styles.lblHomeScreen}>
-        {moment().format('LLLL')}
-      </PrimaryText>
-      <PrimaryButton
-        label={translate('homeScreen.openModalScreen')}
-        onPress={() => navigation.navigate('ModalScreen')}
-      />
+      <PrimaryButton label="Click to Scan a Doc" onPress={handleOpenScanner} />
     </View>
   );
 };

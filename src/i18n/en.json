@@ -9,7 +9,8 @@
   },
   "homeScreen": {
     "homeScreen": "Home Screen",
-    "openModalScreen": "Open Modal Screen"
+    "openModalScreen": "Open Modal Screen",
+    "docScanner": "Document Scanner"
   },
   "profileScreen": {
     "profileScreen": "Profile Screen",

@@ -8,3 +8,29 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+-keep class com.docscanner.BuildConfig { *; }
+
+# React Native
+-keep class com.facebook.react.** { *; }
+-keep class com.facebook.hermes.** { *; }
+
+# Keep native methods
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+# Keep crash reporting
+-keepattributes SourceFile,LineNumberTable
+-keep public class * extends java.lang.Exception
+
+# React Native WebView
+-keep class com.reactnativecommunity.webview.** { *; }
+
+# AsyncStorage
+-keep class com.reactnativecommunity.asyncstorage.** { *; }
+
+# NetInfo
+-keep class com.reactnativecommunity.netinfo.** { *; }
+
+# React Native SVG
+-keep class com.horcrux.svg.** { *; }

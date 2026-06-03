@@ -44,10 +44,10 @@ const Profile: FC<TabNavigationWithAppStackScreenProps<'Profile'>> = ({
       <PrimaryText style={styles.lblProfileScreen}>
         {translate('profileScreen.profileScreen')}
       </PrimaryText>
-      <PrimaryButton
+      {/* <PrimaryButton
         label={translate('profileScreen.changeLanguage')}
         onPress={handleChangeLanguage}
-      />
+      /> */}
       <PrimaryButton
         label={translate('profileScreen.logout')}
         onPress={() => {

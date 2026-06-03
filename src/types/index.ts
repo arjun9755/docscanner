@@ -21,6 +21,7 @@ export type AppStackParamList = {
   // https://reactnavigation.org/docs/typescript#nesting-navigators
   TabNavigation?: NavigatorScreenParams<TabScreenRouteProp>;
   ModalScreen: undefined;
+  DocScanner: undefined;
 };
 
 /**
