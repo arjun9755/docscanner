@@ -1,5 +1,11 @@
 import React, {FC, useRef} from 'react';
-import {StyleSheet, View, ActivityIndicator, PermissionsAndroid, Platform} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  ActivityIndicator,
+  PermissionsAndroid,
+  Platform,
+} from 'react-native';
 import {WebView} from 'react-native-webview';
 import {AppStackScreenProps} from '@types';
 import {colors} from '@theme';
@@ -21,7 +27,7 @@ const DocScanner: FC<AppStackScreenProps<'DocScanner'>> = ({}) => {
             buttonPositive: 'OK',
           },
         );
-        
+
         const storageGranted = await PermissionsAndroid.request(
           PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
           {
@@ -33,8 +39,10 @@ const DocScanner: FC<AppStackScreenProps<'DocScanner'>> = ({}) => {
           },
         );
 
-        if (cameraGranted === PermissionsAndroid.RESULTS.GRANTED && 
-            storageGranted === PermissionsAndroid.RESULTS.GRANTED) {
+        if (
+          cameraGranted === PermissionsAndroid.RESULTS.GRANTED &&
+          storageGranted === PermissionsAndroid.RESULTS.GRANTED
+        ) {
           console.log('Camera and storage permissions granted');
         }
       } catch (err) {
@@ -52,7 +60,7 @@ const DocScanner: FC<AppStackScreenProps<'DocScanner'>> = ({}) => {
       <SafeAreaView />
       <WebView
         ref={webViewRef}
-        source={{uri: 'https://dubai-ocr-django.onrender.com'}}
+        source={{uri: 'https://dubai-ocr-django.testyourapp.online'}}
         style={styles.webview}
         startInLoadingState={true}
         javaScriptEnabled={true}
@@ -64,8 +72,11 @@ const DocScanner: FC<AppStackScreenProps<'DocScanner'>> = ({}) => {
         allowFileAccessFromFileURLs={true}
         allowUniversalAccessFromFileURLs={true}
         mixedContentMode="always"
-        onPermissionRequest={(request) => {
-          if (request.resources.includes('camera') || request.resources.includes('video')) {
+        onPermissionRequest={request => {
+          if (
+            request.resources.includes('camera') ||
+            request.resources.includes('video')
+          ) {
             request.grant(request.resources);
           }
         }}

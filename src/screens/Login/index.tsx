@@ -34,7 +34,7 @@ const LogIn: FC<AuthStackScreenProps<'LogIn'>> = ({navigation}) => {
         setIsBtnLoading(false);
         showSuccessMessage(translate('messages.loginSuccessful'));
         dispatch(setUserData(initialState.userData));
-      }, 5000);
+      });
 
       // This is the api calling function for yours reference how to call api
 
